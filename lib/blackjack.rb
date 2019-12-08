@@ -63,17 +63,8 @@ def runner
   welcome
   current_total = initial_round
   until current_total > 21 do 
-    hit?(current_total)
+    current_total = hit?(current_total)
     display_card_total(current_total)
-    
-    # prompt_user
-    # input = get_user_input
-    # if input == "s"
-    #   prompt_user
-    # elsif input == "h"
-    #   new_card = deal_card
-    #   current_total += new_card
-    # end
   end
   end_game(current_total)
 end
